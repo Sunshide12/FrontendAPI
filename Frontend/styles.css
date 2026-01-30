@@ -159,6 +159,15 @@ body {
     border: 1px solid var(--border-color);
 }
 
+.welcome-modal-body a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.welcome-modal-body a:hover {
+    color: var(--primary-dark);
+}
+
 .modal-product-card {
     display: flex;
     flex-direction: column;
