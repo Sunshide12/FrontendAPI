@@ -142,6 +142,23 @@ body {
     flex: 1;
 }
 
+.welcome-modal-body p {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.welcome-modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.welcome-modal-body code {
+    background: var(--bg-light);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    border: 1px solid var(--border-color);
+}
+
 .modal-product-card {
     display: flex;
     flex-direction: column;

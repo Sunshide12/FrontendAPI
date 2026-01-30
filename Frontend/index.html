@@ -53,6 +53,27 @@
     </main>
 
 
+    <!-- Modal de bienvenida (onload) -->
+    <div id="welcomeModal" class="modal" role="dialog" aria-labelledby="welcomeModalTitle" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="welcomeModalTitle" class="modal-title">Bienvenido al Marketplace</h2>
+                <button type="button" class="close-btn" onclick="closeWelcomeModal()" aria-label="Cerrar">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body welcome-modal-body">
+                <p><strong>¿Qué hace este frontend?</strong></p>
+                <p>Muestra en tiempo real tres secciones: <strong>Productos</strong>, <strong>Vehículos</strong> y <strong>Personas</strong>. Puedes hacer clic en cualquier tarjeta para ver su detalle en un modal.</p>
+                <p><strong>¿Cómo se comunica con la API?</strong></p>
+                <p>Al cargar la página se hacen peticiones <code>GET</code> a la API en <code>https://products-api-ug0k.onrender.com/</code> a los endpoints <code>/api/products</code>, <code>/api/vehicles</code> y <code>/api/persons</code>. Los datos se obtienen con <code>fetch()</code></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeWelcomeModal()">Entendido</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Estructura del Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -77,6 +98,12 @@
 
     <script src="index.js"></script>
     <script src="modal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('welcomeModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    </script>
 </body>
 
 </html>

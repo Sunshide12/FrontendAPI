@@ -1,4 +1,12 @@
 const myModal = document.getElementById('myModal');
+const welcomeModal = document.getElementById('welcomeModal');
+
+function closeWelcomeModal() {
+    if (welcomeModal) {
+        welcomeModal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+}
 
 // Modal para Productos
 const openModal = (product) => {
@@ -153,11 +161,15 @@ window.addEventListener('click', (event) => {
     if (event.target === myModal) {
         closeModal();
     }
+    if (event.target === welcomeModal) {
+        closeWelcomeModal();
+    }
 });
 
 // Cerrar modal con tecla ESC
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && myModal.classList.contains('show')) {
-        closeModal();
+    if (event.key === 'Escape') {
+        if (myModal.classList.contains('show')) closeModal();
+        if (welcomeModal && welcomeModal.classList.contains('show')) closeWelcomeModal();
     }
 });

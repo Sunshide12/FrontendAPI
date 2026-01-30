@@ -2,6 +2,7 @@ const productsList = document.querySelector("#products-list");
 const vehiclesList = document.querySelector("#vehicles-list");
 const personsList = document.querySelector("#persons-list");
 
+
 // Theme Management
 const themeToggle = document.querySelector("#theme-toggle");
 
