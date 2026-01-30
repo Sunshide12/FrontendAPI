@@ -24,7 +24,7 @@ initTheme();
 
 /* API */
 const consultApi = async routes => {
-    const response = await fetch(`http://localhost:8000/${routes}`)
+    const response = await fetch(`https://products-api-ug0k.onrender.com/${routes}`)
     const { data } = await response.json();
     return data;
 }
